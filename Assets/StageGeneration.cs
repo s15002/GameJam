@@ -6,7 +6,7 @@ public class StageGeneration : MonoBehaviour
     public GameObject pattern1;
     public GameObject pattern2;
     public GameObject pattern3;
-    public GameObject[] obj;
+    public GameObject background;
     public float spawnMin = 1f;
     public float spawnMax = 2f;
     public Vector3 pos = new Vector3(0, 0, 0);
@@ -31,6 +31,7 @@ public class StageGeneration : MonoBehaviour
             if (r == 3)
                 Instantiate(pattern3, pos, Quaternion.identity);
 
+            Instantiate(background, pos, Quaternion.identity);
 
             pos += dir * size;
             yield return new WaitForSeconds(Random.Range(spawnMin, spawnMax));
