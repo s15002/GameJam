@@ -19,7 +19,7 @@ namespace UnityStandardAssets._2D
         // Use this for initialization
         private void Start()
         {
-            m_LastTargetPosition = target.position;
+            m_LastTargetPosition = target.position ;
             m_OffsetZ = (transform.position - target.position).z;
             transform.parent = null;
         }
